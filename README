@@ -1,9 +1,20 @@
-Code Kata sample code. 
+Code Kata sample code 
+---------------------
 
 First pieces of the source code was created at Jayway Stockholm Code Kata session April 5, 2011
 
-Currently containing an implementation of Prag Dave Code Kata 19. 
-
 Hopefully more implementations and potentially other Code Kata exercises could be added and shared with the world. 
 
+Current status
+--------------
+
+Currently containing an implementation of Prag Dave Code Kata 19. 
+
+The current implementation is a Java app contained in a Maven project.
+
+The original Code Kata challenge is described here http://codekata.pragprog.com/2007/01/kata_nineteen_w.html
+
+Running from mvn
+
+mvn exec:java -Dexec.mainClass="com.jayway.codekata.App"
 
