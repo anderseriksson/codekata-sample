@@ -18,3 +18,8 @@ Running from mvn
 
 mvn exec:java -Dexec.mainClass="com.jayway.codekata.App"
 
+Ideas
+-----
+
+Make a Scala version.
+
