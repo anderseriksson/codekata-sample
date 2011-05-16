@@ -13,7 +13,7 @@ import org.junit.Test;
 
 public class AppTest {
 
-	private App app;
+	private WordChainPathFinder app;
 
 	@Before
 	public void setup() {

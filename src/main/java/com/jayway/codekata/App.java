@@ -15,9 +15,9 @@ import com.google.common.io.Files;
  * http://codekata.pragprog.com/2007/01/kata_nineteen_w.html
  * 
  */
-public class App {
+public class App implements WordChainPathFinder {
 	public static void main(String[] args) throws IOException {
-		App app = new App();
+		WordChainPathFinder app = new App();
 		List<String> words = getWordsFromFile();
 		System.out.println(words.size());
 		List<String> shortestPath = app.findShortestPath("cat", "dig", words);
@@ -29,6 +29,10 @@ public class App {
 		return words;
 	}
 
+	/* (non-Javadoc)
+	 * @see com.jayway.codekata.WordChainPathFinder#findShortestPath(java.lang.String, java.lang.String, java.util.List)
+	 */
+	@Override
 	public List<String> findShortestPath(String start, String end, List<String> dictionary) {
 
 		Node startNode = new Node(start);
