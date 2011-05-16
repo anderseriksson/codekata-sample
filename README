@@ -16,7 +16,7 @@ The original Code Kata challenge is described here http://codekata.pragprog.com/
 
 Running from mvn
 
-mvn exec:java -Dexec.mainClass="com.jayway.codekata.App"
+mvn exec:java -Dexec.mainClass="com.jayway.codekata.Runner"
 
 Ideas
 -----
