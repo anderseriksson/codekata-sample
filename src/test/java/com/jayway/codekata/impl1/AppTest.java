@@ -1,4 +1,4 @@
-package com.jayway.codekata;
+package com.jayway.codekata.impl1;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
@@ -13,7 +13,7 @@ import org.junit.Test;
 
 public class AppTest {
 
-	private WordChainPathFinder app;
+	private App app;
 
 	@Before
 	public void setup() {
@@ -46,7 +46,7 @@ public class AppTest {
 		nodes.add(cat);
 		nodes.add(dog);
 		Node cot = new Node("cot");
-		App.linkUpNodeInNodeGraph(nodes, cot);
+		app.linkUpNodeInNodeGraph(nodes, cot);
 		assertEquals(cat.getNeighbours().get(0), cot);
 		assertEquals(cot.getNeighbours().get(0), cat);
 		assertTrue(nodes.contains(cot));
@@ -63,7 +63,7 @@ public class AppTest {
 		cot.becomeNeighbourTo(cog);
 		cog.becomeNeighbourTo(dog);
 
-		App.applyDistance(cat, 0, null);
+		app.applyDistance(cat, 0, null);
 
 		assertEquals(0, cat.getDistance());
 		assertNull(cat.getFromNode());

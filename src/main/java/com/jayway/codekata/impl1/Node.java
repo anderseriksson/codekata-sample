@@ -1,4 +1,4 @@
-package com.jayway.codekata;
+package com.jayway.codekata.impl1;
 
 import java.util.ArrayList;
 import java.util.List;

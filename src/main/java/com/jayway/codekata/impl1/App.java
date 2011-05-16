@@ -1,12 +1,9 @@
-package com.jayway.codekata;
+package com.jayway.codekata.impl1;
 
-import java.io.File;
-import java.io.IOException;
-import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.google.common.io.Files;
+import com.jayway.codekata.WordChainPathFinder;
 
 /**
  * Hello words! ;)
@@ -16,18 +13,7 @@ import com.google.common.io.Files;
  * 
  */
 public class App implements WordChainPathFinder {
-	public static void main(String[] args) throws IOException {
-		WordChainPathFinder app = new App();
-		List<String> words = getWordsFromFile();
-		System.out.println(words.size());
-		List<String> shortestPath = app.findShortestPath("cat", "dig", words);
-		System.out.println(shortestPath);
-	}
 
-	private static List<String> getWordsFromFile() throws IOException {
-		List<String> words = Files.readLines(new File("english.txt"), Charset.forName("ISO-8859-1"));
-		return words;
-	}
 
 	/* (non-Javadoc)
 	 * @see com.jayway.codekata.WordChainPathFinder#findShortestPath(java.lang.String, java.lang.String, java.util.List)
@@ -68,7 +54,7 @@ public class App implements WordChainPathFinder {
 		return null;
 	}
 
-	static void linkUpNodeInNodeGraph(List<Node> processedNodes, Node node) {
+	void linkUpNodeInNodeGraph(List<Node> processedNodes, Node node) {
 		for (Node processedNode : processedNodes) {
 			if (processedNode.isNeighbour(node)) {
 				processedNode.becomeNeighbourTo(node);
@@ -77,7 +63,7 @@ public class App implements WordChainPathFinder {
 		processedNodes.add(node);
 	}
 
-	static void applyDistance(Node node, int distance, Node fromNode) {
+	void applyDistance(Node node, int distance, Node fromNode) {
 		if (node.getDistance() > distance) {
 			node.setDistance(distance);
 			node.setFromNode(fromNode);

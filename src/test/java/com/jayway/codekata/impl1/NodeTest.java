@@ -1,10 +1,12 @@
-package com.jayway.codekata;
+package com.jayway.codekata.impl1;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
+
+import com.jayway.codekata.impl1.Node;
 
 public class NodeTest {
 
